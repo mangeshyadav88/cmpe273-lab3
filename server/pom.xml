@@ -18,6 +18,13 @@
 			<name>Sonatype Nexus Snapshots</name>
 			<url>http://oss.sonatype.org/content/repositories/snapshots</url>
 		</repository>
+<repository>
+        <id>sonatype-nexus-staging</id>
+        <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        <releases>
+            <enabled>true</enabled>
+        </releases>
+    </repository>
 		<repository>
 			<id>repo.codahale.com</id>
 			<url>http://repo.codahale.com/</url>
@@ -25,11 +32,21 @@
 	</repositories>
 
 	<dependencies>
+<dependency>                                   
+  <groupId>net.openhft</groupId>
+  <artifactId>chronicle-map</artifactId>
+  <version>2.1.7</version>
+</dependency>
 		<dependency>
 			<groupId>com.yammer.dropwizard</groupId>
 			<artifactId>dropwizard-core</artifactId>
 			<version>${dropwizard.version}</version>
 		</dependency>
+ <dependency> 
+      <groupId>org.sonatype.plexus</groupId> 
+      <artifactId>plexus-build-api</artifactId> 
+      <version>0.0.6</version> 
+    </dependency> 
 	</dependencies>
 
 	<build>
