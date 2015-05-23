@@ -4,8 +4,9 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
 import org.joda.time.DateTime;
+import java.io.Serializable;
 
-public class Entry {
+public class Entry implements Serializable{
 
     @NotNull
     private long key;
